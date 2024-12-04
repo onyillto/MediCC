@@ -1,5 +1,33 @@
 <template>
+  
   <div class="min-h-screen bg-gray-100 flex">
+      <!-- Sidebar -->
+    <aside class="w-64 bg-gray-900 text-white flex flex-col ">
+      <div class="p-4 flex items-center space-x-3 my-10">
+        <img src="/public/logo1.png" alt="Logo" class="h-10 w-10 object-cover" />
+        <h1 class="text-lg font-bold">Mediterranean Recreational Center</h1>
+      </div>
+      <nav class="flex flex-col gap-4 mt-8 px-4">
+        <router-link to="/dashboard" class="flex items-center gap-3 text-gray-300 hover:text-white bg-white">
+          <img src="/icob.png" alt="Manage" class="h-10 w-10 object-cover" />
+          <p class="text-black">Members List</p>
+        </router-link>
+        <router-link to="/dashboard/verify-guest" class="flex items-center text-black gap-3 bg-white hover:text-white">
+          <img src="/ion_person-outline.png" alt="List" class="h-10 w-10 object-cover filter invert" />
+          <p class="text-black">Guest List</p>
+        </router-link>
+      </nav>
+      <div class="mt-auto px-4 py-6 border-t border-gray-700">
+        <div class="flex items-center gap-4">
+          <img src="/public/profile.png" alt="Receptionist" class="w-10 h-10 rounded-full object-cover" />
+          <div>
+            <h2 class="font-bold">Receptionist</h2>
+            <p class="text-sm text-gray-400">recep@example.com</p>
+          </div>
+        </div>
+        <button class="mt-4 w-full bg-red-500 py-2 px-4 text-white rounded hover:bg-red-600">Log out</button>
+      </div>
+    </aside>
     <main class="flex-1 p-8">
       <header class="flex items-center justify-between my-10">
         <h1 class="text-2xl font-bold">Members List</h1>

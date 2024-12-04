@@ -11,7 +11,6 @@ import Login from "./views/Login.vue";
 import MemberList from "./views/Apointment.vue";
 import "./style.css";
 import { Component } from "lucide-react";
-
 // Define your routes
 const routes = [
   {
