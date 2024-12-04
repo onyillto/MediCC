@@ -8,6 +8,7 @@ import Successful from "./views/Successful.vue";
 import Dashboard from "./views/Dashboard.vue";
 import PlusTwo from "./views/PlusTwo.vue";
 import Login from "./views/Login.vue";
+import MemberList from "./views/Apointment.vue";
 import "./style.css";
 import { Component } from "lucide-react";
 
@@ -47,6 +48,11 @@ const routes = [
     path: "/dashboard",
     name: "Dashboard",
     component: Dashboard, // Add the component here
+  },
+  {
+    path: "/dashboard/verify-guest",
+    name: "MemberList",
+    component: MemberList, // Add the component here
   },
 ];
 

@@ -6,21 +6,16 @@
         <img src="/public/logo1.png" alt="Logo" class="h-10 w-10 object-cover" />
         <h1 class="text-lg font-bold">Mediterranean Recreational Center</h1>
       </div>
-      <nav class="flex flex-col gap-4 mt-8 px-4">
-        <a href="#" class="flex items-center gap-3 text-gray-300 hover:text-white bg-white">
-          <img src="/public/icob.png" alt="Logo" class="h-10 w-10 object-cover" />
-<p class="text-black">Manage Appointment</p> 
-        </a>
-        <!-- <a href="#" class="flex items-center text-black gap-3 bg-white hover:text-white">
-           <img
-  src="/public/ion_person-outline.png"
-  alt="Logo"
-  class="h-10 w-10 object-cover filter invert"
-/>
-
-         <p class="text-black">Appointment List</p> 
-        </a> -->
-      </nav>
+<nav class="flex flex-col gap-4 mt-8 px-4">
+    <router-link to="/dashboard" class="flex items-center gap-3 text-gray-300 hover:text-white bg-white">
+      <img src="/icob.png" alt="Manage" class="h-10 w-10 object-cover" />
+      <p class="text-black">Manage Appointment</p>
+    </router-link>
+    <router-link to="/dashboard/verify-guest" class="flex items-center text-black gap-3 bg-white hover:text-white">
+      <img src="/ion_person-outline.png" alt="List" class="h-10 w-10 object-cover filter invert" />
+      <p class="text-black">Appointment List</p>
+    </router-link>
+  </nav>
       <div class="mt-auto px-4 py-6 border-t border-gray-700">
         <div class="flex items-center gap-4">
           <img src="/public/profile.png" alt="Receptionist" class="w-10 h-10 rounded-full object-cover" />
