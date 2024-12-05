@@ -64,6 +64,7 @@
     </main>
   </div>
 </template>
+
 <script>
 import * as XLSX from "xlsx";
 
@@ -73,6 +74,15 @@ export default {
       appointments: [], // Parsed data from Excel
       searchQuery: "", // User input for filtering
     };
+  },
+   beforeCreate() {
+    // Check if the user is logged in
+    const isLogged = localStorage.getItem("isLogged") === "true";
+
+    if (!isLogged) {
+      // Redirect to the login page if not logged in
+      this.$router.push("/login");
+    }
   },
   computed: {
     filteredAppointments() {

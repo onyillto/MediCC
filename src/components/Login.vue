@@ -22,14 +22,10 @@
       </div>
     </div>
 
-
-
     <!-- Login Form Container -->
     <div class="flex flex-col lg:flex-row gap-8 justify-center w-full max-w-[1200px]">
-
       <!-- Login Form -->
       <div class="bg-white shadow-md rounded-lg p-6 mt-8 w-full max-w-md lg:w-[700px]">
-       
         <p class="text-sm font-[16px] text-gray-500 mb-6">Enter your email and password to login</p>
         <form @submit.prevent="handleLoginSubmit">
           <div class="mb-4">
@@ -68,7 +64,6 @@
     </div>
   </div>
 </template>
-
 <script>
 export default {
   data() {
@@ -77,43 +72,28 @@ export default {
         email: "",
         password: "",
       },
+      // Predefined credentials
+      savedEmail: "user@example.com",
+      savedPassword: "password123",
     };
   },
   methods: {
     handleLoginSubmit() {
-      console.log("Login Submitted", this.loginData);
-      alert("Login successful!");
+      // Verify credentials
+      if (
+        this.loginData.email === this.savedEmail &&
+        this.loginData.password === this.savedPassword
+      ) {
+        // Save isLogged in localStorage
+        localStorage.setItem("isLogged", true);
+        alert("Login successful!");
+        console.log("User logged in successfully");
+      } else {
+        alert("Invalid email or password");
+        console.log("Login failed");
+      }
     },
   },
 };
 </script>
-
-<style scoped>
-/* Import the Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
-/* Apply the font to the entire page */
-.signup-page {
-  font-family: 'Lato', sans-serif;
-}
-
-/* Background Image and Opacity */
-.bg-neutral-50 {
-  position: relative;
-}
-.bg-neutral-50::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url('/public/pngtree-contemporary-fitness-center-interior-featuring-state-of-the-art-gym-equipment-picture-image_.png');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5;
-  z-index: -1;
-}
-</style>
-
 
