@@ -131,11 +131,11 @@ export default {
         };
 
         // Send the data to the backend API
-        const response = await axios.post('http://localhost:9000/api/v1/user/rsvp', dataToSubmit);
+        const response = await axios.post('https://invite-fbvc.onrender.com/api/v1/user/rsvp', dataToSubmit);
 
         // Handle successful response
         if (response.status === 200) {
-          alert('RSVP and Plus One details submitted successfully!');
+          // alert('RSVP and Plus One details submitted successfully!');
           this.$router.push('/success'); // Redirect or show a success page
         }
       } catch (error) {

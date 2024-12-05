@@ -27,11 +27,11 @@ const routes = [
     component: PlusOne, // Add the component here
   },
 
-  {
-    path: "/add-plus-two",
-    name: "PlusTwo",
-    component: PlusTwo, // Add the component here
-  },
+  // {
+  //   path: "/add-plus-two",
+  //   name: "PlusTwo",
+  //   component: PlusTwo, // Add the component here
+  // },
   {
     path: "/success",
     name: "Successful",

@@ -87,7 +87,7 @@ export default {
         // Save isLogged in localStorage
         localStorage.setItem("isLogged", true);
         alert("Login successful!");
-        console.log("User logged in successfully");
+       this.$router.push("/dashboard"); 
       } else {
         alert("Invalid email or password");
         console.log("Login failed");

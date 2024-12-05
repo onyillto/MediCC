@@ -137,7 +137,7 @@ export default {
     async fetchAppointments() {
       this.isLoading = true; // Set loading to true when fetching data
       try {
-        const response = await fetch("http://localhost:9000/api/v1/user/rsvps");
+        const response = await fetch("https://invite-fbvc.onrender.com/api/v1/user/rsvps");
         const data = await response.json();
         if (data.message === "RSVP records retrieved successfully") {
           this.appointments = data.data;
@@ -153,7 +153,7 @@ export default {
     async searchAppointments(query) {
       this.isLoading = true; // Set loading to true when searching
       try {
-        const response = await fetch(`http://localhost:9000/api/v1/user/search?firstname=${query}`);
+        const response = await fetch(`https://invite-fbvc.onrender.com/api/v1/user/search?firstname=${query}`);
         const data = await response.json();
         if (response.ok) {
           this.appointments = data.data;
@@ -170,7 +170,7 @@ export default {
       try {
         const newAction = currentAction === "pending" ? "verified" : "pending";
 
-        const response = await fetch(`http://localhost:9000/api/v1/user/rsvp/${userId}`, {
+        const response = await fetch(`https://invite-fbvc.onrender.com/api/v1/user/rsvp/${userId}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",

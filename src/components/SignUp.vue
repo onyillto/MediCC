@@ -176,7 +176,7 @@ export default {
    async submitRSVP(rsvpData) {
   try {
     const response = await axios.post(
-      "medi-cc-backend.vercel.app/rsvp", 
+      "https://invite-fbvc.onrender.com/api/v1/user/rsvp", 
       rsvpData
     );
     console.log("RSVP Success:", response.data);
