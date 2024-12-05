@@ -176,7 +176,7 @@ export default {
    async submitRSVP(rsvpData) {
   try {
     const response = await axios.post(
-      "http://localhost:9000/api/v1/user/rsvp", 
+      "medi-cc-backend.vercel.app/rsvp", 
       rsvpData
     );
     console.log("RSVP Success:", response.data);
