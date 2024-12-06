@@ -3,6 +3,7 @@ import App from "./App.vue";
 import { createRouter, createWebHistory } from "vue-router"; // Import Vue Router
 //import Home from "./views/Home.vue"; // Import the Home component
 import SignUp from "./views/SignUp.vue";
+import Special from "./views/Special.vue";
 import PlusOne from "./views/PlusOne.vue";
 import Successful from "./views/Successful.vue";
 import Dashboard from "./views/Dashboard.vue";
@@ -22,16 +23,21 @@ const routes = [
     component: SignUp, // Add the component here
   },
   {
+    path: "/commitee-invite",
+    name: "Special",
+    component: Special, // Add the component here
+  },
+  {
     path: "/add-plus-one",
     name: "PlusOne",
     component: PlusOne, // Add the component here
   },
 
-  // {
-  //   path: "/add-plus-two",
-  //   name: "PlusTwo",
-  //   component: PlusTwo, // Add the component here
-  // },
+  {
+    path: "/add-plus-two",
+    name: "PlusTwo",
+    component: PlusTwo, // Add the component here
+  },
   {
     path: "/success",
     name: "Successful",
